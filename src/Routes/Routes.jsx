@@ -1,6 +1,12 @@
 import { Routes, Route } from "react-router"
 import { MainLayout } from "../layouts/MainLayout"
-import { About,Blogs,BlogsDetails,Home,NoPage,PlacesRoute } from "../pages/About"
+import { Blogs } from "../pages/Blogs"
+import {About} from "../pages/About"
+import {BlogsDetails} from "../pages/BlogsDetails"
+import {Home} from "../pages/Home"
+import {NoPage} from "../pages/NoPage"
+
+import { PlacesRoute } from "../pages/PlacesRoute"
 
 
 
