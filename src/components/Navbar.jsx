@@ -7,9 +7,9 @@ export function Navbar() {
 
     return (
         <>
-            <nav className="h-10 flex justify-around ">
+            <nav className="h-10 flex justify-around items-center py-10">
                 <div>
-                    <img src={logo} alt="site logo" />
+                    <img src={logo} alt="site logo" className='w-30'/>
                 </div>
                 <div className='flex gap-2 '>
                     <Button asChild>
@@ -29,6 +29,11 @@ export function Navbar() {
                     </Button>
                     
                 </div>
+                <Button variant="primary">
+                    <span>Book Now</span>
+
+
+                </Button>
 
             </nav>
         </>
