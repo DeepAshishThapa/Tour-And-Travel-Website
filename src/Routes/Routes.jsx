@@ -1,4 +1,6 @@
 import { Routes, Route } from "react-router"
+import { MainLayout } from "../layouts/MainLayout"
+import { About,Blogs,BlogsDetails,Home,NoPage,PlacesRoute } from "../pages/About"
 
 
 

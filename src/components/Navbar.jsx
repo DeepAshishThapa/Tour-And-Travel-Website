@@ -1,6 +1,8 @@
-export function Home(){
+
+export function Navbar(){
     return(
         <>
+          
         </>
     )
 }
