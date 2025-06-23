@@ -6,7 +6,7 @@ export const ButtonVariants=cva("rounded-md font-medium transition-colors hover:
         variants:{
             variant:{
                 default:"bg-transparent text-black",
-                primary:"bg-blue-500 text-white hover:bg-blue-700",
+                primary:"bg-cyan-500 text-white hover:bg-cyan-700",
                 secondary:"bg-gray-400 text-white hover:bg-gray-600"
             },
             size:{

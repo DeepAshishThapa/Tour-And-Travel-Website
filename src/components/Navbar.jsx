@@ -7,11 +7,11 @@ export function Navbar() {
 
     return (
         <>
-            <nav className="h-10 flex justify-around items-center py-10">
+            <nav className="h-10 flex justify-around items-center py-8">
                 <div>
-                    <img src={logo} alt="site logo" className='w-30'/>
+                    <img src={logo} alt="site logo" className='w-30 '/>
                 </div>
-                <div className='flex gap-2 '>
+                <div className='flex gap-2 items-center'>
                     <Button asChild>
                         <NavLink to={"/"}>Home</NavLink>
                     </Button>
