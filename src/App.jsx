@@ -1,11 +1,11 @@
-
+import { Approutes } from "./Routes/Routes"
 
 function App() {
   
 
   return (
     <>
-      <div className="bg-red-500 h-2"></div>
+      <Approutes/>
     </>
   )
 }

@@ -1,0 +1,7 @@
+function MainLayout(){
+    return(
+        <>
+        
+        </>
+    )
+}
