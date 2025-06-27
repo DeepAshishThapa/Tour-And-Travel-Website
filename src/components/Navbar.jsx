@@ -5,14 +5,15 @@ import { NavLink } from 'react-router'
 import { Link } from 'react-router'
 import { HugeiconsIcon } from '@hugeicons/react';
 import { Menu04Icon } from '@hugeicons/core-free-icons'
-import {Menu03Icon} from '@hugeicons/core-free-icons'
+import { Menu03Icon } from '@hugeicons/core-free-icons'
 import { ArrowDown01Icon } from '@hugeicons/core-free-icons';
 import { useEffect, useState } from 'react'
+import { Menubox } from './Menubox'
 
 export function Navbar() {
-    const [showmenu,setshowmenu]=useState(false)
-    const togglemenu=()=>{
-        setshowmenu(prev=>!prev)
+    const [showmenu, setshowmenu] = useState(false)
+    const togglemenu = () => {
+        setshowmenu(prev => !prev)
     }
     const DropdownLinks = [
         {
@@ -32,6 +33,20 @@ export function Navbar() {
 
     return (
         <>
+            {
+                showmenu ? (
+                    <Menubox className="w-[35%] py-10 px-5" />
+                ) :
+                    (
+                        <Menubox className="w-0 px-0 py-0"/>
+                    )
+            }
+            <div className="h-8 bg-gradient-to-r from-cyan-700 to-cyan-400 sm:flex text-white justify-between px-20 items-center hidden">
+                <div>20% off on next booking</div>
+                <div>Mobile No. +91 123456789</div>
+
+            </div>
+
             <nav className="h-10 flex md:justify-around items-center sm:py-8 py-10 justify-between px-3 md:px-0 shadow-md">
                 <div>
                     <img src={logo} alt="site logo" className='w-30 ' />
@@ -86,25 +101,33 @@ export function Navbar() {
 
                     </Button>
                     {
-                        showmenu?(
-                    
-                    <HugeiconsIcon icon={Menu03Icon}
-                       strokeWidth={3}
-                    onClick={togglemenu}
-                    className="hover:cursor-pointer"
-                    />
-                    
-                )
-                    :(
-                       
-                        <HugeiconsIcon 
-                    icon={Menu04Icon} 
-                    strokeWidth={3}
-                    onClick={togglemenu}
-                    className="hover:cursor-pointer"
-                    />
-                    )
-}
+                        showmenu ? (
+                            <>
+
+                                <HugeiconsIcon icon={Menu03Icon}
+                                    strokeWidth={3}
+                                    onClick={togglemenu}
+                                    className="hover:cursor-pointer block md:hidden"
+                                />
+
+
+                            </>
+
+
+                        )
+                            : (
+                                <>
+                                    <HugeiconsIcon
+                                        icon={Menu04Icon}
+                                        strokeWidth={3}
+                                        onClick={togglemenu}
+                                        className="hover:cursor-pointer block md:hidden"
+                                    />
+
+                                </>
+
+                            )
+                    }
                 </div>
 
             </nav>
