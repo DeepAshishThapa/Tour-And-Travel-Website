@@ -13,7 +13,7 @@ export function Navbar() {
                 </div>
                 <div className='flex gap-2 items-center'>
                     <Button asChild>
-                        <NavLink to={"/"}>Home</NavLink>
+                        <NavLink to={"/"} onClick={()=>window.scrollTo(0,0)}>Home</NavLink>
                     </Button>
                     <Button asChild >
                         <NavLink to={"/blogs"}>Blogs</NavLink>
