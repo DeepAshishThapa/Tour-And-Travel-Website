@@ -16,13 +16,13 @@ export function Navbar() {
                         <NavLink to={"/"} onClick={()=>window.scrollTo(0,0)}>Home</NavLink>
                     </Button>
                     <Button asChild >
-                        <NavLink to={"/blogs"}>Blogs</NavLink>
+                        <NavLink to={"/blogs"} onClick={()=>window.scrollTo(0,0)}>Blogs</NavLink>
                     </Button>
                     <Button asChild >
-                        <NavLink to={"/places"}>Best Places</NavLink>
+                        <NavLink to={"/places"} onClick={()=>window.scrollTo(0,0)}>Best Places</NavLink>
                     </Button>
                     <Button asChild >
-                        <NavLink to={"/about"}>About</NavLink>
+                        <NavLink to={"/about"} onClick={()=>window.scrollTo(0,0)}>About</NavLink>
                     </Button>
                     <Button>
                         <span>Quick Links</span>
