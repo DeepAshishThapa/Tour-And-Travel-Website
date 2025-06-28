@@ -45,7 +45,7 @@ export function Navbar() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  scrolltoTop=useCallback(()=>{
+  const scrolltoTop=useCallback(()=>{
     window.scrollTo(0, 0);
 
   },[])
