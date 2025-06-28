@@ -2,7 +2,9 @@ import { Button } from "./Button"
 import { NavLink } from "react-router"
 import profile from  '../assets/profile.webp'
 import { cn } from "../utis/cn"
-export function Menubox({className}) {
+import { memo } from "react"
+function MenuboxComponent({className}) {
+   
     return (
         <>
             <div className={cn("absolute w-0 overflow-x-hidden bg-white shadow-md z-10 flex flex-col gap-15 h-[100%] transition-all duration-100",className)}>
@@ -33,3 +35,4 @@ export function Menubox({className}) {
 
 
 }
+export const Menubox= memo(MenuboxComponent);
