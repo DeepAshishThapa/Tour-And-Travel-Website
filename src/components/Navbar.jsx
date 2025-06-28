@@ -9,6 +9,7 @@ import { Menu03Icon } from '@hugeicons/core-free-icons'
 import { ArrowDown01Icon } from '@hugeicons/core-free-icons';
 import { useEffect, useState } from 'react'
 import { Menubox } from './Menubox'
+import { useCallback } from 'react'
 
 export function Navbar() {
     const [showmenu, setshowmenu] = useState(false)
@@ -29,18 +30,38 @@ export function Navbar() {
             link: "/#location"
         }
     ]
+    useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setshowmenu(false);
+      }
+    };
 
+    window.addEventListener('resize', handleResize);
+
+    // optional: run once on mount
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  scrolltoTop=useCallback(()=>{
+    window.scrollTo(0, 0);
+
+  },[])
+   
 
     return (
         <>
             {
                 showmenu ? (
-                    <Menubox className="w-[35%] py-10 px-5" />
+                    <Menubox className="w-[80%] py-10 px-5" />
                 ) :
                     (
                         <Menubox className="w-0 px-0 py-0"/>
                     )
             }
+
             <div className="h-8 bg-gradient-to-r from-cyan-700 to-cyan-400 sm:flex text-white justify-between px-20 items-center hidden">
                 <div>20% off on next booking</div>
                 <div>Mobile No. +91 123456789</div>
@@ -51,18 +72,18 @@ export function Navbar() {
                 <div>
                     <img src={logo} alt="site logo" className='w-30 ' />
                 </div>
-                <div className='md:flex gap-2 items-center hidden '>
+                <div className='md:flex gap-2 items-center hidden midnav'>
                     <Button asChild >
-                        <NavLink to={"/"} onClick={() => window.scrollTo(0, 0)}>Home</NavLink>
+                        <NavLink to={"/"} onClick={scrolltoTop}>Home</NavLink>
                     </Button>
                     <Button asChild >
-                        <NavLink to={"/blogs"} onClick={() => window.scrollTo(0, 0)}>Blogs</NavLink>
+                        <NavLink to={"/blogs"} onClick={scrolltoTop}>Blogs</NavLink>
                     </Button>
                     <Button asChild >
-                        <NavLink to={"/places"} onClick={() => window.scrollTo(0, 0)}>Best Places</NavLink>
+                        <NavLink to={"/places"} onClick={scrolltoTop}>Best Places</NavLink>
                     </Button>
                     <Button asChild >
-                        <NavLink to={"/about"} onClick={() => window.scrollTo(0, 0)}>About</NavLink>
+                        <NavLink to={"/about"} onClick={scrolltoTop}>About</NavLink>
                     </Button>
                     <Button className='flex items-center group relative'>
 
@@ -73,7 +94,7 @@ export function Navbar() {
                             strokeWidth={2}
                             className="ml-1 transition-transform duration-300 group-hover:rotate-180"
                         />
-                        <div className="absolute w-[150px]  top-12 bg-white py-4 px-2 shadow-md">
+                        <div className="absolute w-[150px] -left-9 top-10 bg-white py-4 px-2 shadow-md hidden group-hover:block">
                             {DropdownLinks.map(({ name, link }) => (
                                 <div className='leading-loose hover:bg-blue-200 rounded-md'>
                                     <Button asChild>
