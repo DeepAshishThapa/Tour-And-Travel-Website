@@ -1,11 +1,11 @@
 import {cva} from "class-variance-authority"
 
 export const InputVariants=cva(
-    "rounded-md placeholder-gray-500 shadow-md",
+    "rounded-2xl placeholder-gray-500 shadow-md",
     {
         variants:{
             variant:{
-                default:"focus:outline-1 focus:outline-cyan-500",
+                default:"focus:outline-1 focus:outline-cyan-500 bg-gray-100",
                 error:"border-red-500 text-red-600 placeholder-red-400",
                 success:"border-green-500 text-green-600 placeholder-green-400",
 

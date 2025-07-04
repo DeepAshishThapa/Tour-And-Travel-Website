@@ -7,6 +7,8 @@ function App() {
     <>
       <Approutes/>
       <div className="bg-cyan-400"></div>
+      <input type="text" className="" />
+      
     </>
   )
 }
