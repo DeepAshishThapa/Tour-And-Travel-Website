@@ -1,30 +1,76 @@
 import { Inputbox } from "./Inputbox";
+import { Button } from "./Button";
+import { useState } from "react";
+
+
 
 export function Homehero() {
-    return (
-        <>
-            <div className="h-[60vh] ">
+    const [value,setValue]=useState(150)
+    const handleinputcchange=(e)=>{
+        setValue(e.target.value)
+    }
+    
+return(
+    <>
+        <div className="h-[60vh] ">
 
-                <div className="h-full flex items-center">
-                    <div className="grid grid-cols-1 gap-4 text-white w-[80%] m-auto">
-                        <div>
-                            <p>Our Packages</p>
-                            <h1 className="text-4xl font-bold">Search Your Destination</h1>
+            <div className="h-full flex items-center ">
+                <div className="grid grid-cols-1 gap-4 text-white w-[80%] m-auto 2xl:w-300 ">
+                    <div>
+                        <p>Our Packages</p>
+                        <h1 className="text-4xl font-bold">Search Your Destination</h1>
+                    </div>
+                    <div className="w-full h-35 bg-white rounded-md px-4 py-4 relative flex  justify-center gap-5 text-gray-500">
+                        <div className="w-[32%]">
+                            <h1 className="">Search Your Destination</h1>
+                            <Inputbox className="w-[100%]" type="text" placeholder="Dubai" />
                         </div>
-                        <div className="w-full h-10 bg-white">
-
+                        <div className="w-[32%]">
+                            <h1 className="">Date</h1>
+                            <Inputbox className="w-[100%]" type="date" />
+                        </div>
+                        <div className="w-[32%]">
+                            <div className="flex justify-between">
+                            <h1 className="">Max Price</h1>
+                            <label for="slide">
+                                <span id="valueofrange" className="font-bold text-black">
+                                    
+                                     ${value}
+                                </span>
+                            </label>
+                            </div>
+                            <Inputbox className="w-[100%] px-2 py-3 accent-cyan-300"
+                                type="range"
+                                min="150"
+                                max="1000"
+                                step="1"
+                                id="slide"
+                                value={value}
+                                onChange={handleinputcchange}
+                               
+                            />
+                            
 
                         </div>
 
+
+
+
+                        <Button variant="primary" size="md" className="rounded-full absolute top-30">
+                            Search Now
+
+                        </Button>
                     </div>
 
                 </div>
 
             </div>
-        </>
 
+        </div>
+    </>
 
-    )
+)
+
 
 
 }
