@@ -1,7 +1,9 @@
+import { Placeshero } from "../components/Placeshero"
 export function PlacesRoute(){
     return(
         <>
-        <div>Places</div>
+        <Placeshero/>
+        
         </>
     )
 }

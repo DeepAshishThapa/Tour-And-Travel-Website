@@ -31,25 +31,25 @@ export function Navbar() {
         }
     ]
     useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 768) {
-        setshowmenu(false);
-      }
-    };
+        const handleResize = () => {
+            if (window.innerWidth >= 768) {
+                setshowmenu(false);
+            }
+        };
 
-    window.addEventListener('resize', handleResize);
+        window.addEventListener('resize', handleResize);
 
-    // optional: run once on mount
-    handleResize();
+        // optional: run once on mount
+        handleResize();
 
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
-  const scrolltoTop=useCallback(()=>{
-    window.scrollTo(0, 0);
+    const scrolltoTop = useCallback(() => {
+        window.scrollTo(0, 0);
 
-  },[])
-   
+    }, [])
+
 
     return (
         <>
@@ -58,7 +58,7 @@ export function Navbar() {
                     <Menubox className="w-[80%] py-10 px-5" />
                 ) :
                     (
-                        <Menubox className="w-0 px-0 py-0"/>
+                        <Menubox className="w-0 px-0 py-0" />
                     )
             }
 
@@ -85,28 +85,33 @@ export function Navbar() {
                     <Button asChild >
                         <NavLink to={"/about"} onClick={scrolltoTop}>About</NavLink>
                     </Button>
-                    <Button className='flex items-center group relative'>
+                    <div className="relative group">
+                        {/* Trigger Button */}
+                        <Button className="flex items-center">
+                            <span>Quick Links</span>
+                            <HugeiconsIcon
+                                icon={ArrowDown01Icon}
+                                size={20}
+                                strokeWidth={2}
+                                className="ml-1 transition-transform duration-300 group-hover:rotate-180"
+                            />
+                        </Button>
 
-                        <span>Quick Links </span>
-                        <HugeiconsIcon
-                            icon={ArrowDown01Icon}
-                            size={20}
-                            strokeWidth={2}
-                            className="ml-1 transition-transform duration-300 group-hover:rotate-180"
-                        />
-                        <div className="absolute w-[150px] -left-9 top-10 bg-white py-4 px-2 shadow-md hidden group-hover:block">
+                        {/* Dropdown Menu */}
+                        <div className="absolute top-full mt-2 w-[150px] bg-white py-4 px-2 shadow-md 
+                          opacity-0 invisible 
+                           group-hover:visible group-hover:opacity-100 
+                           hover:visible hover:opacity-100 
+                             transition-all duration-200 z-50">
                             {DropdownLinks.map(({ name, link }) => (
-                                <div className='leading-loose hover:bg-blue-200 rounded-md'>
+                                <div key={name} className="leading-loose hover:bg-blue-200 rounded-md">
                                     <Button asChild>
                                         <a href={link}>{name}</a>
-
                                     </Button>
                                 </div>
-
                             ))}
-
                         </div>
-                    </Button>
+                    </div>
 
 
                 </div>
