@@ -1,4 +1,6 @@
 .active{
     color: rgb(3, 199, 199);
 }
-
+ul{
+    list-style: none;
+}
