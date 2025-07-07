@@ -1,6 +1,6 @@
 import { cva } from "class-variance-authority";
 
-export const CardVariants=cva("shadow-md bg-white overflow-hidden",
+export const CardVariants=cva("shadow-lg bg-white overflow-hidden",
     {
         variants:{
             size:{
