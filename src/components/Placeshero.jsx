@@ -12,7 +12,7 @@ import { MapPinpoint01Icon } from '@hugeicons/core-free-icons';
 export const Placeshero = () => {
     return (
         <>
-            <div className="px-23 pt-10 ">
+            <div className="sm:px-23 pt-10 px-2">
                 <div className="flex gap-2 items-center">
 
                     <div className="bg-cyan-600 w-2 h-13 inline"></div>
