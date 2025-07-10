@@ -1,5 +1,6 @@
 import { Homehero } from "../components/Homehero"
 import hotel1 from "../assets/hotel1.mp4"
+import { PlacesRoute } from "./PlacesRoute"
 export function Home() {
     return (
         <>
@@ -11,7 +12,9 @@ export function Home() {
 
 
                 <Homehero />
+                
             </div>
+            <PlacesRoute/>
             
           
         </>

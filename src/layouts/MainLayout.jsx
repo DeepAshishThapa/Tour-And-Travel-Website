@@ -11,6 +11,8 @@ export function MainLayout() {
             
             <Navbar />
             <Outlet />
+
+            
             <Footer/>
             
 
