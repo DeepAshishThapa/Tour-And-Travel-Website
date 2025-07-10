@@ -1,6 +1,12 @@
+html, body, #root {
+  height: 100%;
+}
 .active{
     color: rgb(3, 199, 199);
 }
 ul{
     list-style: none;
+}
+.links li::before{
+    content: ">";
 }

@@ -108,7 +108,7 @@ export const Footer = () => {
 
 
                     </div>
-                    <div className='bg-cyan-500 absolute bottom-0 w-full h-13 left-0 right-0 text-center text-white font-semibold py-3'>
+                    <div className='bg-cyan-500 absolute bottom-0 w-full h-15 left-0 right-0 text-center text-white font-semibold py-3'>
                         <span>@copyright 2024 All rights reserved || Made with ❤️ by TCJ</span>
                     </div>
 

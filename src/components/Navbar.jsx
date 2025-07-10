@@ -53,14 +53,16 @@ export function Navbar() {
 
     return (
         <>
-            {
-                showmenu ? (
-                    <Menubox className="w-[80%] py-10 px-5" />
-                ) :
-                    (
-                        <Menubox className="w-0 px-0 py-0" />
-                    )
-            }
+            
+                {
+                    showmenu ? (
+                        <Menubox className="w-[80%] py-10 px-5" />
+                    ) :
+                        (
+                            <Menubox className="w-0 px-0 py-0" />
+                        )
+                }
+           
 
             <div className="h-8 bg-gradient-to-r from-cyan-700 to-cyan-400 sm:flex text-white justify-between px-20 items-center hidden">
                 <div>20% off on next booking</div>
