@@ -17,14 +17,23 @@ return(
             <div className="h-full flex items-center ">
                 <div className="grid grid-cols-1 gap-4 text-white w-[95%] m-auto 2xl:w-300 ">
                     <div>
-                        <p>Our Packages</p>
+                        <p
+                         data-aos="fade-up"
+                         data-aos-delay="300"
+                        >Our Packages
+                           
+                        </p>
                         <h1
                          className="text-4xl font-bold"
                          data-aos="fade-up"
                          data-aos-delay="300"
                         >Search Your Destination</h1>
                     </div>
-                    <div className="w-full sm:h-35 h-auto bg-white rounded-md px-4 py-4 relative flex-col flex sm:flex-row justify-center gap-5 text-gray-500">
+                    <div className="w-full sm:h-35 h-auto bg-white rounded-md px-4 py-4 relative flex-col flex sm:flex-row justify-center gap-5 text-gray-500"
+                     data-aos="fade-up"
+                         data-aos-delay="600"
+                    >
+                       
                         <div className="sm:w-[32%] w-[100%]">
                             <h1 className="">Search Your Destination</h1>
                             <Inputbox className="w-[100%]" type="text" placeholder="Dubai" />
