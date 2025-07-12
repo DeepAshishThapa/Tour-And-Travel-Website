@@ -7,7 +7,7 @@ function MenuboxComponent({className}) {
    
     return (
         <>
-            <div className={cn("fixed top-0 h-screen w-0  overflow-x-hidden bg-white shadow-md z-10 flex flex-col gap-15  transition-all duration-100",className)}>
+            <div className={cn("fixed top-0 h-screen w-0  overflow-x-hidden bg-white shadow-md z-100 flex flex-col gap-15  transition-all duration-100",className)}>
                 <div className="flex items-center gap-1">
                     <img src={profile} alt="" className="w-[100px] "/>
                     <div className="text-gray-500">

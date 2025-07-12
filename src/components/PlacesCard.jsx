@@ -40,4 +40,4 @@ const CardComponent = ({ className, size,img,title,location,description,price,ty
     )
 
 }
-export const Card = memo(CardComponent);
+export const PlacesCard = memo(CardComponent);

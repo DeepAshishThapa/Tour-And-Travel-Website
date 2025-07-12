@@ -64,13 +64,13 @@ export function Navbar() {
                 }
            
 
-            <div className="h-8 bg-gradient-to-r from-cyan-700 to-cyan-400 sm:flex text-white justify-between px-20 items-center hidden">
+            <div className="h-8 bg-gradient-to-r from-cyan-700 to-cyan-400 sm:flex text-white justify-between px-20 items-center hidden fixed w-[100vw] z-10">
                 <div>20% off on next booking</div>
                 <div>Mobile No. +91 123456789</div>
 
             </div>
 
-            <nav className="h-10 flex md:justify-around items-center sm:py-8 py-10 justify-between px-3 md:px-0 shadow-md">
+            <nav className="h-10 flex md:justify-around items-center sm:py-8 py-10 justify-between px-3 md:px-0 shadow-md fixed w-[100vw] md:top-8 z-10 bg-white ">
                 <div>
                     <img src={logo} alt="site logo" className='w-30 ' />
                 </div>

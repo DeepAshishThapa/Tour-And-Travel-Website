@@ -10,7 +10,9 @@ export function MainLayout() {
             
             
             <Navbar />
+            <div className="pt-23">
             <Outlet />
+            </div>
 
             
             <Footer/>

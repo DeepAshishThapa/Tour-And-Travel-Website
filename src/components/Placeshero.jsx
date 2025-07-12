@@ -1,4 +1,4 @@
-import { Card } from "./PlacesCard";
+import { PlacesCard } from "./PlacesCard";
 import boat from '../assets/boat.jpg'
 import tajmahal from '../assets/tajmahal.jpg'
 import water from '../assets/water.jpg'
@@ -78,7 +78,7 @@ export const Placeshero = () => {
                 <div className="pt-10 grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-4 hover:cursor-pointer">
 
                      {PlacesData.map((item,index)=>(
-                        <Card {...item}/>
+                        <PlacesCard {...item}/>
                      ))}
 
 
