@@ -5,15 +5,21 @@ import 'aos/dist/aos.css';
 
 function App() {
   useEffect(() => {
-    AOS.init({ duration: 1000 }); // global duration (optional)
+    AOS.init({
+      duration: 1000,
+      offset: 200,   // 👈 element starts animating only when 200px inside viewport
+      once: false,
+
+    })
+         
   }, []);
-  
+
 
   return (
     <>
-      <Approutes/>
-      
-      
+      <Approutes />
+
+
     </>
   )
 }
