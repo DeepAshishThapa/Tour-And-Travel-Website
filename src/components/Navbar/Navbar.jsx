@@ -1,6 +1,6 @@
-import { ButtonVariants } from '../cva/ButtonVariants'
-import logo from '../assets/logo.png'
-import { Button } from './Button'
+import { ButtonVariants } from '../../cva/ButtonVariants'
+import logo from '../../assets/logo.png'
+import { Button } from '../Button'
 import { NavLink } from 'react-router'
 import { Link } from 'react-router'
 import { HugeiconsIcon } from '@hugeicons/react';

@@ -1,14 +1,10 @@
 import { BlogsCard } from "./BlogsCard"
-import boat from '../assets/boat.jpg'
-import tajmahal from '../assets/tajmahal.jpg'
-import water from '../assets/water.jpg'
-import { useEffect } from "react"
-import AOS from 'aos';
-export const Blogshero = () => {
-    useEffect(() => {
-        AOS.refresh(); // 👈 re-calculate all element positions when this section loads
-    }, []);
+import boat from '../../assets/boat.jpg'
+import tajmahal from '../../assets/tajmahal.jpg'
+import water from '../../assets/water.jpg'
 
+export const Blogshero = () => {
+    // 
     const BlogsData = [
         {
             img: tajmahal,

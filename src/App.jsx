@@ -8,7 +8,7 @@ function App() {
     AOS.init({
       duration: 1000,
       offset: 200,   // 👈 element starts animating only when 200px inside viewport
-      once: false,
+      once: true,
 
     })
          

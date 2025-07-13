@@ -1,5 +1,5 @@
-import { CardVariants } from "../cva/CardVariants";
-import { cn } from "../utis/cn";
+import { CardVariants } from "../../cva/CardVariants";
+import { cn } from "../../utis/cn";
 import { memo } from "react";
 import { HugeiconsIcon } from '@hugeicons/react';
 import { MapPinpoint01Icon } from '@hugeicons/core-free-icons';

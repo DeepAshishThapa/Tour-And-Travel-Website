@@ -1,5 +1,5 @@
-import { CardVariants } from "../cva/CardVariants"
-import { cn } from "../utis/cn"
+import { CardVariants } from "../../cva/CardVariants"
+import { cn } from "../../utis/cn"
 import { Link } from "react-router"
 
 export const BlogsCard = ({ className, img, title, description, author, size, ...props }) => {

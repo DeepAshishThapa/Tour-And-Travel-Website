@@ -1,6 +1,7 @@
-import { Homehero } from "../components/Homehero"
+import { Homehero } from "../components/Home/Homehero"
 import hotel1 from "../assets/hotel1.mp4"
 import { PlacesRoute } from "./PlacesRoute"
+import { Blogs } from "./Blogs"
 export function Home() {
     return (
         <>
@@ -15,6 +16,8 @@ export function Home() {
                 
             </div>
             <PlacesRoute/>
+            <Blogs/>
+
             
           
         </>

@@ -1,5 +1,5 @@
-import { Inputbox } from "./Inputbox";
-import { Button } from "./Button";
+import { Inputbox } from "../Inputbox";
+import { Button } from "../Button";
 import { useState } from "react";
 
 

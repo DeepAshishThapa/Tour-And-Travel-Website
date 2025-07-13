@@ -1,10 +1,10 @@
-import { PlacesCard } from "./PlacesCard";
-import boat from '../assets/boat.jpg'
-import tajmahal from '../assets/tajmahal.jpg'
-import water from '../assets/water.jpg'
-import sydney from '../assets/sydney.jpg'
-import LA from '../assets/LA.jpg'
-import cali from '../assets/cali.jpg'
+import { PlacesCard } from './PlacesCard'
+import boat from '../../assets/boat.jpg';
+import tajmahal from '../../assets/tajmahal.jpg'
+import water from '../../assets/water.jpg'
+import sydney from '../../assets/sydney.jpg'
+import LA from '../../assets/LA.jpg'
+import cali from '../../assets/cali.jpg'
 
 const PlacesData = [
     {
@@ -75,7 +75,9 @@ export const Placeshero = () => {
                     <h1 className="font-bold text-3xl ">Best Places to visit</h1>
                 </div>
 
-                <div className="pt-10 grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-4 hover:cursor-pointer">
+                <div className="pt-10 grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-4 hover:cursor-pointer"
+                  data-aos="fade-up"
+                >
 
                      {PlacesData.map((item,index)=>(
                         <PlacesCard {...item}/>

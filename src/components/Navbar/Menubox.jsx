@@ -1,7 +1,7 @@
-import { Button } from "./Button"
+import { Button } from "../Button"
 import { NavLink } from "react-router"
-import profile from  '../assets/profile.webp'
-import { cn } from "../utis/cn"
+import profile from  '../../assets/profile.webp'
+import { cn } from "../../utis/cn"
 import { memo } from "react"
 function MenuboxComponent({className}) {
    

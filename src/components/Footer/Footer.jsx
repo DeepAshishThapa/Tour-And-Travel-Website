@@ -1,5 +1,5 @@
-import footervid from '../assets/footervid.mp4'
-import logo from '../assets/logo.png'
+import footervid from '../../assets/footervid.mp4'
+import logo from '../../assets/logo.png'
 import { HugeiconsIcon } from '@hugeicons/react';
 import { TelegramIcon } from '@hugeicons/core-free-icons'
 import { PhoneCheckIcon } from '@hugeicons/core-free-icons';

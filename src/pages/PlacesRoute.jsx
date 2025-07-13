@@ -1,4 +1,4 @@
-import { Placeshero } from "../components/Placeshero"
+import { Placeshero } from "../components/Places/Placeshero"
 export function PlacesRoute(){
     return(
         <>
