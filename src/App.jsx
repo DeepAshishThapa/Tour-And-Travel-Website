@@ -17,7 +17,8 @@ function App() {
 
   return (
     <>
-      <Approutes />
+    <div className="overflow-x-hidden"><Approutes /></div>
+      
 
 
     </>

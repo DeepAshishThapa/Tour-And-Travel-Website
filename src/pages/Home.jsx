@@ -3,6 +3,7 @@ import hotel1 from "../assets/hotel1.mp4"
 import { PlacesRoute } from "./PlacesRoute"
 import { Blogs } from "./Blogs"
 import { Banner } from "../components/Banner"
+import { Banner2 } from "../components/Banner2"
 export function Home() {
     return (
         <>
@@ -19,6 +20,10 @@ export function Home() {
             <PlacesRoute/>
             <Banner/>
             <Blogs/>
+            <Banner2/>
+            
+            
+
 
             
           
